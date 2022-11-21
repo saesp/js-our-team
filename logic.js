@@ -51,6 +51,7 @@ const teamTab = document.getElementById("team-tab");
 
 for (let i = 0; i < teamMembers.length; i++){
     let member = teamMembers[i];
+    console.log(i);
     console.log(member);
 
     for (let key in member){
