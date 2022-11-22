@@ -4,7 +4,6 @@
 // Creare l’array di oggetti con le informazioni fornite
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
@@ -58,18 +57,16 @@ for (let i = 0; i < teamMembers.length; i++){
     teamTab.innerHTML += `
         <div class="cont-member">
             <img src="${member.image}">
-            <div class="name-user">${member.nome}</div>
-            <div class="name-role">${member.ruolo}</div>
+            <div class="name-user">
+                <h3 class="name">${member.nome}</h3>
+            </div>
+            <div class="role-user">
+                <div class="role">${member.ruolo}</div>
+            </div>
         </div>`
 
     for (let key in member){
         console.log(member[key]);
-
-        // contMember.append(member[key]);
-        // console.log(contMember);
-        // teamTab.append(contMember);
-        // console.log(teamTab);
-        
     }
 }
 
