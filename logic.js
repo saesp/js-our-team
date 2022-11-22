@@ -48,21 +48,27 @@ console.log(teamMembers);
 
 
 const teamTab = document.getElementById("team-tab");
-let contMember = document.createElement("div");
-contMember.classList.add("cont-member");
+// let contMember = document.createElement("div");
+// contMember.classList.add("cont-member");
 
 for (let i = 0; i < teamMembers.length; i++){
     let member = teamMembers[i];
     console.log(i + " member:", member);
 
+    teamTab.innerHTML += `
+        <div class="cont-member">
+            <img src="${member.image}">
+            <div class="name-user">${member.nome}</div>
+            <div class="name-role">${member.ruolo}</div>
+        </div>`
 
     for (let key in member){
         console.log(member[key]);
 
-        contMember.append(member[key]);
-        console.log(contMember);
-        teamTab.append(contMember);
-        console.log(teamTab);
+        // contMember.append(member[key]);
+        // console.log(contMember);
+        // teamTab.append(contMember);
+        // console.log(teamTab);
         
     }
 }
