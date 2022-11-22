@@ -48,12 +48,23 @@ console.log(teamMembers);
 
 
 const teamTab = document.getElementById("team-tab");
+let contMember = document.createElement("div")
+contMember.classList.add("cont-member");
 
 for (let i = 0; i < teamMembers.length; i++){
     let member = teamMembers[i];
-    console.log("member:", i);
+    console.log(member);
+
+    contMember.append = member;
+    console.log(contMember);
+    
+    teamTab.append = contMember;
+    console.log(teamTab);
+
+
 
     for (let key in member){
         console.log(member[key]);
     }
 }
+
